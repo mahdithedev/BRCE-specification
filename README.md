@@ -59,12 +59,25 @@ packet = b"\x03\x00\x06ls -l\x0D"
 
 | Type | Code | Description |
 | ---- | ------- | -------- |
-| PROF | 0 | Will create a profile on the bridge |
-| INIT | 1 | Establishes a connection between the target and the bridge |
-| CONN | 2 | Initializes a session in the Bridge and a channel between the Client and the Target |
-| INP  | 3 | input request |
-| OUT  | 4 | output request |
-| ERR  | 5 | Contains information about an error that occurred |
+| PROF | 0 | will create a profile on the bridge |
+| INIT | 1 | establishes a connection between the target and the bridge |
+| CONN | 2 | initializes a session in the Bridge and a channel between the Client and the Target |
+| LIS  | 5 | if a client sends a LIS packet it means that it is requesting the list of profiles and if a server is sending this packet the payload contains the list of profiles |
+| INP  | 4 | input request |
+| OUT  | 5 | output request |
+| ERR  | 6 | contains information about an error that occurred |
+
+the second table defines what the payload represents in each packet type
+
+| Type | Payload |
+| ---- | ------- |
+| PROF | a json structure containing all profile info |
+| INIT | Profile Id |
+| CONN | Profile Id |
+| LIS  | an expression that will be matched against profiles, the matched profiles will be sent in a packet with the same type |
+| INP  | arbitrary input |
+| OUT  | interpeter output |
+| ERR  | error code |
 
 ## Size
 
