@@ -58,7 +58,7 @@ packet = b"\x03\x00\x06ls -l\x0D"
 ## Types
 
 | Type | Code | Description |
-| ---- | ------- |
+| ---- | ------- | -------- |
 | PROF | 0 | Will create a profile on the bridge |
 | INIT | 1 | Establishes a connection between the target and the bridge |
 | CONN | 2 | Initializes a session in the Bridge and a channel between the Client and the Target |
