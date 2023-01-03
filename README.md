@@ -112,4 +112,4 @@ you can find info about each error in the table below
 | 1 | Profile ID is not valid | raised if a CONN request wants to connect to a profule that doesn't exist |
 | 2 | The channel is not created yet | |
 | 3 | access denied | if a client is not authenticated then they will receive this error |
-| 500 | unknown | some unhandeled error happend in the process |
+| 4 | unknown | some unhandeled error happend in the process |
