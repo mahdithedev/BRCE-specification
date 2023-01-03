@@ -57,7 +57,7 @@ packet = b"\x03\x00\x06ls -l\x0D"
 
 ## Types
 
-| Type | Code | Description |
+| Abbreviation | Code | Description |
 | ---- | ------- | -------- |
 | PROF | 0 | will create a profile on the bridge |
 | INIT | 1 | establishes a connection between the target and the bridge |
