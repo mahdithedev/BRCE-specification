@@ -90,7 +90,7 @@ contains arbitrary data
 
 # Profiles
 
-a profile is a filed-value structure stored in a JSON file that contains info about the target
+a profile is a filed-value structure stored in a file on the Bridge and it contains information about a Target.
 
 | Field | Value |
 | ----- | ----- |
