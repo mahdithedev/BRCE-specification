@@ -65,7 +65,8 @@ packet = b"\x03\x00\x06ls -l\x0D"
 | LIS  | 5 | if a client sends a LIS packet it means that it is requesting the list of profiles and if a server is sending this packet the payload contains the list of profiles |
 | INP  | 4 | input request |
 | OUT  | 5 | output request |
-| ERR  | 6 | contains information about an error that occurred |
+| ACK | 6 | acknowledgement packet |
+| ERR  | 7 | contains information about an error that occurred |
 
 the second table defines what the payload represents in each packet type
 
@@ -77,6 +78,7 @@ the second table defines what the payload represents in each packet type
 | LIS  | an expression that will be matched against profiles, the matched profiles will be sent in a packet with the same type |
 | INP  | arbitrary input |
 | OUT  | interpeter output |
+| ACK | contains a single throw away byte signaling that the packet was handeled |
 | ERR  | error code |
 
 ## Size
