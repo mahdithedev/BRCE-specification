@@ -62,7 +62,7 @@ packet = b"\x03\x00\x06ls -l\x0D"
 | PROF | 0 | will create a profile on the bridge |
 | INIT | 1 | establishes a connection between the target and the bridge |
 | CONN | 2 | initializes a session in the Bridge and a channel between the Client and the Target |
-| LIS  | 5 | if a client sends a LIS packet it means that it is requesting the list of profiles and if a server is sending this packet the payload contains the list of profiles |
+| LIS  | 3 | if a client sends a LIS packet it means that it is requesting the list of profiles and if a server is sending this packet the payload contains the list of profiles |
 | INP  | 4 | input request |
 | OUT  | 5 | output request |
 | ACK | 6 | acknowledgement packet |
